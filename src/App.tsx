@@ -10,9 +10,11 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <Header title="Payments" onBack={handleBack} />
-      <div className="pt-4">
-        <PaymentTable />
+      <div className="relative">
+        <Header title="Payments" onBack={handleBack} className="z-10" />
+        <div className="pt-20 z-0">
+          <PaymentTable />
+        </div>
       </div>
     </div>
   );
