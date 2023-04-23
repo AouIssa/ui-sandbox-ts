@@ -23,21 +23,8 @@ const PaymentTable: React.FC = () => {
     ? payments.filter((payment) => payment.feeType === selectedFeeType)
     : payments;
 
-  const handleBackButtonClick = () => {
-    console.log("Back button clicked");
-  };
-
   return (
     <div className="relative w-full">
-      <div className="text-2xl font-semibold mb-6 text-gray-600 w-full pb-2 border-b border-gray-200 hidden md:block">
-        <button
-          className="absolute left-4 top-2 md:hidden text-lg font-semibold text-gray-600 focus:outline-none"
-          onClick={handleBackButtonClick}
-        >
-          &larr;
-        </button>
-        Payments
-      </div>
       <div className="w-full mb-6">
         <label htmlFor="fee-type-select" className="mr-2">
           Filter by fee type:

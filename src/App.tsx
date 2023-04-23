@@ -10,7 +10,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <Header title="Payment" onBack={handleBack} />
+      <Header title="Payments" onBack={handleBack} />
       <div className="pt-4">
         <PaymentTable />
       </div>
