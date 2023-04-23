@@ -25,7 +25,7 @@ const PaymentTable: React.FC = () => {
 
   return (
     <div className="relative w-full">
-      <div className="border border-gray-300 p-4 rounded-lg">
+      <div className="p-4">
         <div className="text-2xl font-semibold mb-6 text-gray-600 w-full pb-2 border-b border-gray-200 hidden md:block">
           Payments
         </div>
@@ -49,7 +49,7 @@ const PaymentTable: React.FC = () => {
             <option value="Other">Other</option>
           </select>
         </div>
-        <div className="w-full overflow-x-auto">
+        <div className="w-full overflow-x-auto border border-gray-300 rounded-lg">
           <table className="min-w-full divide-y divide-gray-200 rounded-lg">
             <thead className="bg-gray-50">
               <tr>
