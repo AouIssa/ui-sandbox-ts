@@ -74,40 +74,51 @@ const PaymentTable: React.FC = () => {
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
-          {filteredPayments.map((payment, index) => (
-            <tr key={index}>
-              <td className="px-6 py-4 whitespace-nowrap text-center">
-                <div className="text-sm text-gray-900">{payment.feeType}</div>
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap text-center">
-                <div className="text-sm text-gray-900">${payment.fee}</div>
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap text-center">
-                <div className="text-sm text-gray-900">
-                  ${payment.amountDue}
-                </div>
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap text-center">
-                <div className="text-sm text-gray-900">{payment.dateDue}</div>
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap text-center">
-                <div className="text-sm text-gray-900">${payment.paid}</div>
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap text-center">
-                <div className="text-sm text-gray-900">
-                  ${payment.remaining}
-                </div>
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap text-center">
-                <button
-                  className="px-4 py-2 text-sm font-medium text-white bg-green-500 rounded hover:bg-green-600 focus:outline-none"
-                  onClick={() => handlePayment(payment)}
-                >
-                  Pay
-                </button>
+          {filteredPayments.length === 0 ? (
+            <tr>
+              <td
+                colSpan={7}
+                className="px-6 py-4 whitespace-nowrap text-center"
+              >
+                <div className="text-sm text-gray-900">No payments due</div>
               </td>
             </tr>
-          ))}
+          ) : (
+            filteredPayments.map((payment, index) => (
+              <tr key={index}>
+                <td className="px-6 py-4 whitespace-nowrap text-center">
+                  <div className="text-sm text-gray-900">{payment.feeType}</div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-center">
+                  <div className="text-sm text-gray-900">${payment.fee}</div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-center">
+                  <div className="text-sm text-gray-900">
+                    ${payment.amountDue}
+                  </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-center">
+                  <div className="text-sm text-gray-900">{payment.dateDue}</div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-center">
+                  <div className="text-sm text-gray-900">${payment.paid}</div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-center">
+                  <div className="text-sm text-gray-900">
+                    ${payment.remaining}
+                  </div>
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap text-center">
+                  <button
+                    className="px-4 py-2 text-sm font-medium text-white bg-green-500 rounded hover:bg-green-600 focus:outline-none"
+                    onClick={() => handlePayment(payment)}
+                  >
+                    Pay
+                  </button>
+                </td>
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
     </div>
