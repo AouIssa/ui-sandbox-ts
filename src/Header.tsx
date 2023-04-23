@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ title, onBack, className }) => {
           <div className="w-20" />
         )}
         <div className="w-full text-center">
-          <h1 className="text-lg font-sans text-gray-500 font-bold">{title}</h1>
+          <h1 className="text-lg font-sans text-gray-600 font-bold">{title}</h1>
         </div>
         <div className="w-10" />
       </div>
