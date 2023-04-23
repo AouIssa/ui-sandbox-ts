@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { payments } from "./paymentsData";
+
 interface Payment {
   feeType: string;
   fee: number;
@@ -8,65 +10,6 @@ interface Payment {
   paid: number;
   remaining: number;
 }
-
-const payments: Payment[] = [
-  {
-    feeType: "Team fee",
-    fee: 50,
-    amountDue: 250,
-    dateDue: "2023-05-01",
-    paid: 0,
-    remaining: 250,
-  },
-  {
-    feeType: "Spare Fee",
-    fee: 10,
-    amountDue: 20,
-    dateDue: "2023-05-15",
-    paid: 5,
-    remaining: 15,
-  },
-  {
-    feeType: "Jersey Fee",
-    fee: 20,
-    amountDue: 40,
-    dateDue: "2023-06-01",
-    paid: 10,
-    remaining: 30,
-  },
-  {
-    feeType: "Drink",
-    fee: 5,
-    amountDue: 10,
-    dateDue: "2023-06-15",
-    paid: 0,
-    remaining: 10,
-  },
-  {
-    feeType: "Tournament",
-    fee: 30,
-    amountDue: 60,
-    dateDue: "2023-07-01",
-    paid: 10,
-    remaining: 50,
-  },
-  {
-    feeType: "Event",
-    fee: 25,
-    amountDue: 50,
-    dateDue: "2023-07-15",
-    paid: 20,
-    remaining: 30,
-  },
-  {
-    feeType: "Other",
-    fee: 15,
-    amountDue: 30,
-    dateDue: "2023-08-01",
-    paid: 10,
-    remaining: 20,
-  },
-];
 
 const PaymentTable: React.FC = () => {
   const [selectedFeeType, setSelectedFeeType] = useState<string | undefined>(
@@ -130,7 +73,6 @@ const PaymentTable: React.FC = () => {
             <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
           </tr>
         </thead>
-
         <tbody className="bg-white divide-y divide-gray-200">
           {filteredPayments.map((payment, index) => (
             <tr key={index}>
