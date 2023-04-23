@@ -25,6 +25,9 @@ const PaymentTable: React.FC = () => {
 
   return (
     <div className="relative w-full">
+      <div className="text-2xl font-semibold mb-6 text-gray-600 w-full pb-2 border-b border-gray-200 hidden md:block">
+        Payments
+      </div>
       <div className="w-full mb-6">
         <label htmlFor="fee-type-select" className="mr-2">
           Filter by fee type:
