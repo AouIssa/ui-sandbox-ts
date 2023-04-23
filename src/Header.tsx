@@ -9,7 +9,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title, onBack }) => {
   return (
     <header className="bg-white shadow p-2 mt-3 md:hidden">
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="container mx-auto flex items-center justify-between border-b-0">
         {onBack ? (
           <button className="focus:outline-none" onClick={onBack}>
             <IoIosArrowBack className="text-blue-500" size={28} />
