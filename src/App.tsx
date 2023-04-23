@@ -12,7 +12,7 @@ const App: React.FC = () => {
     <div className="App">
       <div className="relative">
         <Header title="Payments" onBack={handleBack} className="z-10" />
-        <div className="pt-20 z-0">
+        <div className="pt-20 md:pt-0 z-0">
           <PaymentTable />
         </div>
       </div>
