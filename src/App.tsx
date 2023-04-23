@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import PaymentTable from "./PaymentTable/PaymentTable";
-import Header from "./Header"; 
+import Header from "./Header";
 
 const App: React.FC = () => {
   const handleBack = () => {
@@ -11,9 +11,9 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Header title="Payment" onBack={handleBack} />
-      <main className="p-4">
+      <div className="pt-4">
         <PaymentTable />
-      </main>
+      </div>
     </div>
   );
 };
