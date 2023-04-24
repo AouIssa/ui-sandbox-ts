@@ -28,6 +28,12 @@ const Header: React.FC<HeaderProps> = ({
     }
   };
 
+  const handleTouchEnd = () => {
+    if (showFilterMenu) {
+      setShowFilterMenu(false);
+    }
+  };
+
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -76,7 +82,7 @@ const Header: React.FC<HeaderProps> = ({
                     aria-labelledby="options-menu"
                   >
                     <div
-                      onClick={() => {
+                      onTouchEnd={() => {
                         filterByFeeType("");
                         setShowFilterMenu(false);
                       }}
@@ -86,7 +92,7 @@ const Header: React.FC<HeaderProps> = ({
                       All fee types
                     </div>
                     <div
-                      onClick={() => {
+                      onTouchEnd={() => {
                         filterByFeeType("Team fee");
                         setShowFilterMenu(false);
                       }}
@@ -96,7 +102,7 @@ const Header: React.FC<HeaderProps> = ({
                       Team fee
                     </div>
                     <div
-                      onClick={() => {
+                      onTouchEnd={() => {
                         filterByFeeType("Spare Fee");
                         setShowFilterMenu(false);
                       }}
@@ -106,7 +112,7 @@ const Header: React.FC<HeaderProps> = ({
                       Spare Fee
                     </div>
                     <div
-                      onClick={() => {
+                      onTouchEnd={() => {
                         filterByFeeType("Jersey Fee");
                         setShowFilterMenu(false);
                       }}
@@ -116,7 +122,7 @@ const Header: React.FC<HeaderProps> = ({
                       Jersey Fee
                     </div>
                     <div
-                      onClick={() => {
+                      onTouchEnd={() => {
                         filterByFeeType("Drink");
                         setShowFilterMenu(false);
                       }}
@@ -126,7 +132,7 @@ const Header: React.FC<HeaderProps> = ({
                       Drink
                     </div>
                     <div
-                      onClick={() => {
+                      onTouchEnd={() => {
                         filterByFeeType("Tournament");
                         setShowFilterMenu(false);
                       }}
@@ -136,7 +142,7 @@ const Header: React.FC<HeaderProps> = ({
                       Tournament
                     </div>
                     <div
-                      onClick={() => {
+                      onTouchEnd={() => {
                         filterByFeeType("Event");
                         setShowFilterMenu(false);
                       }}
@@ -146,7 +152,7 @@ const Header: React.FC<HeaderProps> = ({
                       Event
                     </div>
                     <div
-                      onClick={() => {
+                      onTouchEnd={() => {
                         filterByFeeType("Other");
                         setShowFilterMenu(false);
                       }}
