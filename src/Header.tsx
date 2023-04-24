@@ -46,7 +46,7 @@ const Header: React.FC<HeaderProps> = ({
       {/*Mobile view View*/}
 
       <header
-        className={`fixed top-0 left-0 right-0 bg-white border-b border-gray-400 p-2 pt-4 md:hidden ${className}`}
+        className={`flex top-0 left-0 right-0 bg-white border-b border-gray-400 p-4 md:hidden ${className}`}
       >
         <div className="container mx-auto flex items-center justify-between border-b-0">
           <button className="focus:outline-none" onClick={onBack}>

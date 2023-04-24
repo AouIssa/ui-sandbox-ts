@@ -11,7 +11,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <div className="relative">
-        <div className="pt-20 md:pt-0 z-0">
+        <div className="z-0">
           <PaymentTable />
         </div>
       </div>
