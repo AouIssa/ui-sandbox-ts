@@ -55,6 +55,10 @@ const PaymentTable: React.FC = () => {
                   Due
                 </th>
                 <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Payment
+                </th>
+
+                <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Date Due
                 </th>
                 <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -63,7 +67,6 @@ const PaymentTable: React.FC = () => {
                 <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Remaining
                 </th>
-                <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -95,6 +98,14 @@ const PaymentTable: React.FC = () => {
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-center">
+                      <button
+                        className="px-4 py-2 text-sm font-medium text-white bg-green-500 rounded hover:bg-green-600 focus:outline-none"
+                        onClick={() => handlePayment(payment)}
+                      >
+                        Pay
+                      </button>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-center">
                       <div className="text-sm text-gray-900">
                         {payment.dateDue}
                       </div>
@@ -108,14 +119,6 @@ const PaymentTable: React.FC = () => {
                       <div className="text-sm text-gray-900">
                         ${payment.remaining}
                       </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-center">
-                      <button
-                        className="px-4 py-2 text-sm font-medium text-white bg-green-500 rounded hover:bg-green-600 focus:outline-none"
-                        onClick={() => handlePayment(payment)}
-                      >
-                        Pay
-                      </button>
                     </td>
                   </tr>
                 ))
