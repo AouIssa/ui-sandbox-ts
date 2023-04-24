@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import { IoIosArrowBack, IoIosFunnel, IoIosClose } from "react-icons/io";
+import { IoIosArrowBack, IoIosFunnel } from "react-icons/io";
+import { IoFunnelOutline } from "react-icons/io5";
 
 interface HeaderProps {
   title: string;
@@ -67,7 +68,7 @@ const Header: React.FC<HeaderProps> = ({
                   className="focus:outline-none"
                 >
                   {showFilterMenu ? (
-                    <IoIosClose className="text-blue-500" size={24} />
+                    <IoFunnelOutline className="text-blue-500" size={24} />
                   ) : (
                     <IoIosFunnel className="text-blue-500" size={24} />
                   )}
@@ -191,7 +192,7 @@ const Header: React.FC<HeaderProps> = ({
               className="focus:outline-none"
             >
               {showFilterMenu ? (
-                <IoIosClose className="text-blue-500" size={24} />
+                <IoFunnelOutline className="text-blue-500" size={24} />
               ) : (
                 <IoIosFunnel className="text-blue-500" size={24} />
               )}
