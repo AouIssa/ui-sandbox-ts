@@ -32,7 +32,7 @@ const PaymentTable: React.FC = () => {
         filterByFeeType={(feeType) => setSelectedFeeType(feeType)}
         selectedFeeType={selectedFeeType}
       />
-      <div className="pt-05 md:pt-0 z-0">
+      <div className="pt-05 md:pt-0 z-0 border">
         <div className="p-4">
           <div className="w-full overflow-x-auto border border-gray-300 rounded-lg">
             <table className="min-w-full divide-y divide-gray-200 rounded-lg">
