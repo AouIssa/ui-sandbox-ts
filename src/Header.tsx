@@ -37,8 +37,10 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <>
+      {/*Mobile view View*/}
+
       <header
-        className={`fixed top-0 left-0 right-0 bg-white shadow shadow-gray-400 p-2 pt-4 md:hidden ${className}`}
+        className={`fixed top-0 left-0 right-0 bg-white border-b border-gray-400 p-2 pt-4 md:hidden ${className}`}
       >
         <div className="container mx-auto flex items-center justify-between border-b-0">
           <button className="focus:outline-none" onClick={onBack}>
@@ -162,7 +164,9 @@ const Header: React.FC<HeaderProps> = ({
         </div>
       </header>
 
-      <header className="hidden md:flex md:justify-between md:items-center md:bg-white md:shadow md:shadow-gray-400 md:p-4">
+      {/*Desktop View*/}
+
+      <header className="hidden md:flex md:justify-between md:items-center md:bg-white md:border-b md:border-gray-200 md:p-4">
         {onBack && (
           <button className="focus:outline-none" onClick={onBack}>
             <IoIosArrowBack className="text-blue-500" size={28} />
