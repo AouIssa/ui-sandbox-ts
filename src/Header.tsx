@@ -68,9 +68,9 @@ const Header: React.FC<HeaderProps> = ({
                   className="focus:outline-none"
                 >
                   {showFilterMenu ? (
-                    <IoFunnelOutline className="text-blue-500" size={24} />
+                    <IoFunnelOutline className="text-blue-500" size={26} />
                   ) : (
-                    <IoIosFunnel className="text-blue-500" size={24} />
+                    <IoIosFunnel className="text-blue-500" size={26} />
                   )}
                 </button>
 
