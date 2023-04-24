@@ -38,6 +38,14 @@ const PaymentTable: React.FC = () => {
             <table className="min-w-full divide-y divide-gray-200 rounded-lg">
               <thead className="bg-gray-50">
                 <tr>
+                  <th
+                    colSpan={7}
+                    className="p-2 bg-gray-300 text-gray-700 text-left font-medium"
+                  >
+                    Payments
+                  </th>
+                </tr>
+                <tr>
                   <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Fee Type
                   </th>
