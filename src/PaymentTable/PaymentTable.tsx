@@ -34,7 +34,7 @@ const PaymentTable: React.FC = () => {
       />
       <div className="pt-0 md:pt-0 z-0 ">
         <div className="w-full overflow-x-auto border-gray-300 md:mt-0">
-          <table className="w-full divide-y divide-gray-200 ">
+          <table className="w-full divide-y divide-gray-200 border">
             <thead className="bg-gray-50">
               <tr>
                 <th
