@@ -127,6 +127,40 @@ const PaymentTable: React.FC = () => {
           </table>
         </div>
       </div>
+      <div className="bg-white sm:rounded-lg mt-4">
+        <div className="px-4 py-5 sm:p-6">
+          <div className="text-center">
+            <a
+              href="https://stripe.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button
+                type="button"
+                className="inline-flex items-center rounded-md bg-gray-700 px-5 py-3 text-sm text-white shadow-sm hover:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
+              >
+                Powered by{" "}
+                <span className="text-2xl font-bold ml-1.5 -mt-1.5">
+                  stripe
+                </span>
+              </button>
+            </a>
+            <div className="mt-4 max-w-xl mx-auto text-sm text-gray-500">
+              <p>
+                All online payments are securely handled by{" "}
+                <a
+                  href="https://stripe.com"
+                  className="text-blue-400 hover:text-blue-600"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Stripe
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
