@@ -137,7 +137,7 @@ const PaymentTable: React.FC = () => {
             >
               <button
                 type="button"
-                className="inline-flex items-center rounded-md bg-gray-700 px-5 py-3 text-sm text-white shadow-sm hover:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
+                className="inline-flex items-center rounded-md bg-gray-700 px-5 py-2 text-sm text-white shadow-sm hover:bg-gray-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-500"
               >
                 Powered by{" "}
                 <span className="text-2xl font-bold ml-2 transform -translate-y-1">
